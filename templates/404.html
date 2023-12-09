@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Not Found</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <main class="main main--error">
+        <h1 class="error-name">404 - Page Not Found</h1>
+        <svg class="smile-sad" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="100" height="100">
+            <!-- Circle representing the face -->
+            <circle cx="12" cy="12" r="10" stroke="black" stroke-width="2" fill="yellow" />
+            <!-- Eyes -->
+            <circle cx="9" cy="10" r="1" fill="black" />
+            <circle cx="15" cy="10" r="1" fill="black" />
+            <!-- Sad mouth -->
+            <path d="M8 15s2-3 4-3s4 3 4 3" stroke="black" stroke-width="2" fill="transparent" />
+        </svg>
+        <p class="error-text">
+            Sorry, we could not found the page you are looking for.
+            It may have been miss-spelled, or it doesn't exist anymore.
+        </p>
+        <a class="back-home" href="{{ url_for('home') }}">Go To Home</a>
+    </main>
+</body>
+</html>

@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block content %}
+    <main class="main main--project">
+        <div>
+            <img 
+            class="hero" 
+            src="{{ url_for('static', filename=project['hero']) }}"
+            alt="{{ project['name'] }}"
+            >
+            <article class="project">
+                <article class="project__content">
+                    <h2 class="project__heading">{{ project['name'] }}</h2>
+
+                    <p>
+                        I've recently developed a habit tracking app designed to make cultivating positive habits a seamless and engaging experience. With this app, users can effortlessly add new habits to their daily routine, creating a personalized list that evolves with each passing day. The intuitive interface, built using Python and Flask, provides a user-friendly platform for managing habits. As users successfully accomplish their daily goals, they can conveniently mark them as completed with a simple click, fostering a sense of accomplishment and progress. The integration of HTML and CSS ensures a visually appealing and responsive design, enhancing the overall user experience. Behind the scenes, MongoDB is employed as the database, allowing users to track their habit history and easily revisit their achievements from previous days.
+                    </p>
+
+                    <p>
+                        This habit tracking app goes beyond simple to-do lists by providing a dynamic tool for self-improvement. The synergy of Python, Flask, HTML, CSS, and MongoDB results in a robust and efficient application that not only helps users stay organized but also encourages the continuous growth of positive habits. Whether users are establishing new routines or reinforcing existing ones, this app offers a comprehensive solution that adapts to the evolving nature of personal development.
+                    </p>
+                </article>
+
+                <section>
+                    <article class="project__meta-group">
+                        <h3 class="project__heading project__heading--meta"> Technologies Used</h3>
+
+                        <ul class="technology-list">
+                            <li class="technology-list__item">Python/Flask</li>
+                            <li class="technology-list__item">HTML</li>
+                            <li class="technology-list__item">CSS</li>
+                        </ul>
+                    </article>
+
+                    <a class="cta" href="{{ project['prod'] }}">
+                        <img 
+                        class="cta__icon" 
+                        src="{{ url_for('static', filename='img/pointer.svg') }}" 
+                        alt="Tracking app main page with 3 'todo' item.">
+                        View in production
+                    </a>
+                </section>
+            </article>
+        </div>
+    </main>
+{% endblock  %}

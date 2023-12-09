@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block content %}
+    <main class="main main--project">
+        <div>
+            <img 
+            class="hero" 
+            src="{{ url_for('static', filename=project['hero']) }}"
+            alt="{{ project['name'] }}"
+            >
+            <article class="project">
+                <article class="project__content">
+                    <h2 class="project__heading">{{ project['name'] }}</h2>
+
+                    <p>
+                        Embarking on my journey to learn Python proved to be an incredibly insightful and rewarding experience. As I delved into the intricacies of the language, the process of problem-solving ignited a cascade of emotions that fueled my passion for programming. The more challenges I tackled, the more adept I became, leading to the creation of several captivating projects leveraging APIs and the Requests library. Among these ventures, I developed a Stock Tracking app, offering real-time updates on market trends. Additionally, a Weather app provided dynamic weather forecasts through API integration. One particularly engaging project involved extracting the top 100 music tracks from the Billboard website, dynamically compiling them into a Spotify album. I also crafted an Amazon Price Tracker, ensuring users stayed informed about product pricing fluctuations. A standout project involved tracking the International Space Station's proximity to my country, sending SMS notifications via Twilio to prompt me to witness its presence from my window. These projects not only showcased the practical application of Python but also brought forth a wealth of positive emotions through the creative problem-solving process.
+                    </p>
+
+                    <p>
+                        The journey from Python novice to project creator has been marked by continuous learning and the satisfaction of translating newfound skills into tangible, functional applications. Each project not only sharpened my programming proficiency but also offered a unique avenue for exploring the diverse capabilities of Python in the realm of API integration and web scraping. The joy derived from these projects has been immeasurable, reinforcing my commitment to further exploration and innovation in the dynamic world of programming.
+                    </p>
+                </article>
+
+                <section>
+                    <article class="project__meta-group">
+                        <h3 class="project__heading project__heading--meta"> Technologies Used (modules)</h3>
+
+                        <ul class="technology-list">
+                            <li class="technology-list__item">Python</li>
+                            <li class="technology-list__item">Request</li>
+                            <li class="technology-list__item">BeautifulSoup4</li>
+                        </ul>
+                    </article>
+
+                    <a class="cta" href="{{ project['prod'] }}">
+                        <img 
+                        class="cta__icon" 
+                        src="{{ url_for('static', filename='img/pointer.svg') }}" 
+                        alt="Tracking app main page with 3 'todo' item.">
+                        View in production
+                    </a>
+                </section>
+            </article>
+        </div>
+    </main>
+{% endblock  %}
